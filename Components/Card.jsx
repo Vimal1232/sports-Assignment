@@ -1,9 +1,13 @@
 "use client";
 
+import { useContext } from "react";
 import Data from "../Data/Carddata.json";
 import Image from "next/image";
+import { ThemeContext } from "@/app/page";
 
 const Card = () => {
+  const { lightMode } = useContext(ThemeContext);
+
   return (
     <section>
       <div className=" grid grid-cols-4 gap-3 max-lg:grid-cols-3 max-md:grid-cols-2 max-vmd:grid-cols-1 max-ss:grid-cols-2 max-xs:grid-cols-1">
@@ -11,7 +15,9 @@ const Card = () => {
           return (
             <div
               key={item.id}
-              className=" p-3 bg-cardbgdark flex flex-col  overflow-hidden gap-3"
+              className={` p-3 ${
+                lightMode ? "bg-white" : " bg-cardbgdark"
+              } flex flex-col  overflow-hidden gap-3 drop-shadow-lg`}
             >
               <div className=" overflow-hidden h-[385px]">
                 <img
@@ -22,24 +28,48 @@ const Card = () => {
                 />
               </div>
               <div>
-                <h2 className=" font-inter text-[17px] text-white font-medium ">
+                <h2
+                  className={` font-inter text-[17px]  ${
+                    lightMode ? "text-black" : "text-white"
+                  } font-medium `}
+                >
                   {item.name}
                 </h2>
               </div>
-              <div className=" bg-moredark flex justify-between text-left p-3">
+              <div
+                className={` ${
+                  lightMode ? "bg-white" : "bg-moredark"
+                } flex justify-between text-left p-3`}
+              >
                 <div className="flex flex-col gap-2">
-                  <p className=" text-[12px] text-textdark font-normal font-inter ">
+                  <p
+                    className={` text-[12px] text-textdark ${
+                      lightMode ? "text-black" : "text-textdark"
+                    } font-normal font-inter `}
+                  >
                     Total Events
                   </p>
-                  <p className=" text-[14px] text-white font-medium">
+                  <p
+                    className={`text-[14px] ${
+                      lightMode ? "text-black" : "text-textdark"
+                    } font-medium`}
+                  >
                     {item.events}
                   </p>
                 </div>
                 <div className="flex flex-col gap-2">
-                  <p className=" text-[12px] text-textdark font-normal font-inter ">
+                  <p
+                    className={` text-[12px] ${
+                      lightMode ? "text-black" : "text-textdark"
+                    } font-normal font-inter `}
+                  >
                     Sport
                   </p>
-                  <p className=" text-[14px] text-white font-medium">
+                  <p
+                    className={` text-[14px] ${
+                      lightMode ? "text-black" : "text-textdark"
+                    } font-medium`}
+                  >
                     {item.sport}
                   </p>
                 </div>

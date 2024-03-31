@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Las Vegas Aviators",
+    "date": "OCT 15 | SUN | 4:30 PM",
+    "address": "Las Vegas Ballpark, Las Vegas, Nevada",
+    "button": "Take Flight Collection",
+    "Image": "/fifth.jpeg"
+  },
+  {
+    "id": 2,
+    "name": "Sacramento River Cats",
+    "date": "OCT 15 | SUN | 4:30 PM",
+    "address": "Sutter Health Park, Sacramento, California",
+    "button": "Orange Collection",
+    "Image": "/sixth.jpeg"
+  },
+  {
+    "id": 3,
+    "name": "Las Vegas Aviators",
+    "date": "OCT 15 | SUN | 4:30 PM",
+    "address": "Las Vegas Ballpark, Las Vegas, Nevada",
+    "button": "Take Flight Collection",
+    "Image": "/fifth.jpeg"
+  }
+]

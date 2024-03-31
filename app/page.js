@@ -1,9 +1,9 @@
 "use client";
 
 import { useState, useEffect, useContext, createContext } from "react";
-import Ads from "@/components/Ads";
-import Card from "@/components/Card";
-import Spotlight from "@/components/Spotlight";
+import Ads from "@/Components/Ads";
+import Card from "@/Components/Card";
+import Spotlight from "@/Components/Spotlight";
 
 export const ThemeContext = createContext();
 

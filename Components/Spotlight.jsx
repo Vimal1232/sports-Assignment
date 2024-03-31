@@ -1,6 +1,9 @@
+"use client";
+
 import { useContext } from "react";
 import Spot from "../Data/spotlight.json";
 import { ThemeContext } from "@/app/page";
+import Image from "next/image";
 
 const Spotlight = () => {
   const { lightMode } = useContext(ThemeContext);
@@ -32,9 +35,9 @@ const Spotlight = () => {
         </div>
 
         <div className="flex gap-5 items-center">
-          <div>
-            <button className=" border-[#2C9CF0] border-[2px] p-3 max-md:hidden">
-              <img src="/chevron-left.svg" alt="" className="w-[32px]" />
+          <div className=" flex-shrink-0">
+            <button className=" border-[#2C9CF0] border-[2px] p-3 max-md:hidden flex items-center justify-center">
+              <Image src="/left.png" width={32} height={32} alt="" />
             </button>
           </div>
           <div className=" grid grid-cols-3 gap-5 max-md:grid-cols-2 max-ss:grid-cols-1">
@@ -81,9 +84,9 @@ const Spotlight = () => {
               );
             })}
           </div>
-          <div>
+          <div className=" flex-shrink-0">
             <button className=" border-[#2C9CF0] border-[2px] p-3 max-md:hidden">
-              <img src="/chevron-right.svg" alt="" className="w-[32px]" />
+              <Image src="/right.png" width={32} height={32} />
             </button>
           </div>
         </div>
